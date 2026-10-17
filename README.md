@@ -136,4 +136,4 @@ space-bunny-free
 
 ## License
 
-MIT
+MIT —— 见 [LICENSE](LICENSE)。第三方代码归属见 [NOTICE](NOTICE)。

@@ -1,0 +1,10 @@
+本项目包含来自第三方项目的代码
+================================
+
+zen-gateway/fingerprint.js 的 ID 生成逻辑移植自：
+  jcleng/opencode-free-provider — src/fingerprint.js
+  https://github.com/jcleng/opencode-free-provider
+  许可：MIT License
+
+原项目通过消融实验定位出 OpenCode Zen 免费档 gate 的判定规则
+（尤其 counter <= 63 这一条），本项目做了移植重写与本地复验。
