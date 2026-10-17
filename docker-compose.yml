@@ -1,0 +1,19 @@
+services:
+  zen-gateway:
+    image: node:22-alpine
+    container_name: zen-gateway
+    restart: unless-stopped
+    working_dir: /app
+    command: node server.js
+    ports:
+      # 只绑定本机，避免局域网/公网裸奔；需要外部访问改成 "8791:8791"
+      - "127.0.0.1:8791:8791"
+    volumes:
+      # 代码与数据都在 D 盘，容器可随意重建
+      - ./zen-gateway:/app
+    environment:
+      - TZ=Asia/Shanghai
+      - PORT=8791
+      - HOST=0.0.0.0
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
